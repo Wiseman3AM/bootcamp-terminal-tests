@@ -1,5 +1,5 @@
 import assert from 'assert';
-import greet from '../greet.js';
+import greet from '../function/greet.js';
 import { describe, it } from 'node:test';
 
 describe('The greet function', function() {
