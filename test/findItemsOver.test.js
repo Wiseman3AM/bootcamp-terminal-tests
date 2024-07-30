@@ -1,13 +1,6 @@
 import assert from 'assert';
-import findItemsOver20 from '../function/findItemsOver20.js';
+import findItemsOver from '../function/findItemsOver.js';
 import { describe, it } from 'node:test';
-
-
-
-
-
-
-
 
 
 const itemList = [
@@ -46,21 +39,18 @@ const results3 = [
 
 
 
-
-describe('The findItemsOver20 function', function() {
-    it('should determine whether items are over 20', function() {
-        assert.deepEqual(results, findItemsOver20(itemList));
-
-    });
-    
-    it('should determine whether items are over 20', function() {
-        assert.deepEqual(results2, findItemsOver20(itemList2));
+describe('The itemsOver20 function', function() {
+    it('should return items with quantity over 20', function() {
+        assert.deepEqual(results, findItemsOver(itemList, 20));
     });
 
-    it('should determine whether items are over 20', function() {
-        assert.deepEqual(results3, findItemsOver20(itemList3));
+    it('should return an empty array if no items are over the threshold', function() {
+        assert.deepEqual(results2, findItemsOver(itemList2, 20));
+    });
+
+    it('should return an empty array if no items are over the threshold', function() {
+        assert.deepEqual(results3, findItemsOver(itemList3, 20));
     });
 });
 
-
-
+console.log('findItemsOver passed!');

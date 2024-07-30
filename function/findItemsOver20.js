@@ -5,7 +5,8 @@ for (var i = 0; i < itemList.length; i++) {
     itemsOver20.push(itemList[i])
   } 
  }
-return itemsOver20
+ console.log('findItemsOver20 passed!');
+ return itemsOver20;
 }
 
 
